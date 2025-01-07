@@ -8,12 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <a href="#welcome"><img alt="logo" src="resources/images/logo.png" class="logo scaling"></a>
-        <div class="scroll-button scaling" onclick="scrollToTop()">
-            ↑
-        </div>
+        <div class="fixed">
+            <a href="#welcome"><img alt="logo" src="resources/images/logo.png" class="logo scaling"></a>
+            <div class="scroll-button scaling" onclick="scrollToTop()">
+                ↑
+            </div>
+            <div class="scrollbar">
+                <div onclick="scrollToSection('welcome')" id="lander-dot" class="dot active"></div>
+                <div onclick="scrollToSection('about')" id="about-dot" class="dot"></div>
+                <div onclick="scrollToSection('projects')" id="projects-dot" class="dot"></div>
+            </div>
+        </div> 
         <div class="landing-page page" id="welcome">
-            <img alt="landing page bg" src="resources/images/landing-page-bg.jpg" class="landing-page-bg">
             <h1>GURIAN</h1>
         </div>
         <div class="about page" id="about">

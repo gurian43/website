@@ -7,6 +7,10 @@
     overflow-x: hidden;
 }
 
+* ::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: hsl(0, 0%, 10%);
 }
@@ -22,7 +26,7 @@ body {
 .logo, .scroll-button {
     width: 40px;
     height: 40px;
-    margin: 8px;
+    margin: 16px;
     position: fixed;
     z-index: 1000;
 }
@@ -43,6 +47,34 @@ body {
     bottom: 0;
 }
 
+.scrollbar {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: hsla(0, 0%, 40%, 0.2);
+    margin: 16px;
+    position: fixed;
+    height: 100px;
+    right: 0;
+    top: 43%;
+}
+
+.dot {
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+    flex-grow: 0;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(0, 0%, 50%);
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.active {
+    flex-grow: 5;
+    background-color: hsl(0, 0%, 90%);
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -53,10 +85,15 @@ body {
 }
 
 .landing-page {
-
+    background-image: url("../images/landing-page-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .landing-page h1 {
+    padding: 10px 100%;
+    background-color: hsla(0, 0%, 10%, 0.6);
     font-size: 5em;
     margin: 0;
+    border-radius: 50px;
 }
