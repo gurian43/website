@@ -94,6 +94,10 @@ body {
 
 .landing-page {
     background-image: url("../images/landing-page-bg.webp");
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -105,3 +109,10 @@ body {
     margin: 0;
     border-radius: 50px;
 }
+
+/* responsiveness */
+@media only screen and (max-device-width: 1366px) {
+    .landing-page {
+      background-attachment: scroll;
+    }
+  }
