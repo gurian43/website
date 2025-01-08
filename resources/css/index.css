@@ -219,6 +219,15 @@ body {
     margin-bottom: 10px;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
 /* responsiveness */
 @media only screen and (max-device-width: 400px) {
     .landing-page {
