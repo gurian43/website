@@ -127,7 +127,7 @@ body {
 .about-text h1 {
     font-size: 2.5em;
     border-bottom: 2px solid white;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .sections-container {
@@ -163,6 +163,10 @@ body {
     margin: 10px;
 }
 
+.section p {
+    margin: 10px 0;
+}
+
 .setup {
     display: flex;
     gap: 10%;
@@ -175,6 +179,28 @@ body {
     width: 45%;
     margin: 10px 0;
     font-size: 0.8em;
+}
+
+.setup div p {
+    margin: 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h1 {
+    text-align: center;
+    width: 90%;
+    font-size: 2.5em;
+    border-bottom: 2px solid white;
+    margin-bottom: 16px;
+}
+.project-card h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
 }
 
 /* responsiveness */
