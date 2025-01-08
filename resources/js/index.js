@@ -3,6 +3,11 @@ const imgURLs = [
     "/resources/images/landing-page-bg2.webp"
 ]
 
+const sounds = [
+    new Audio('/resources/sounds/win.mp3'), 
+    new Audio('/resources/sounds/yippe.mp3')
+];
+
 document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(${imgURLs[Math.floor(Math.random() * imgURLs.length)]})`;
 
 const landerDot = document.getElementById('lander-dot');
@@ -20,6 +25,24 @@ const scrollToSection = (section) => {
         sectionElement.scrollIntoView({behavior: 'smooth'});
     }
 }
+
+document.querySelector('.logo').addEventListener('click', () => {
+    sounds[Math.floor(Math.random() * sounds.length)].play();
+
+    confetti({
+        particleCount: 100,
+        angle: 45,
+        spread: 80,
+        origin: { x: 0, y: 1 }
+    });
+
+    confetti({
+        particleCount: 100,
+        angle: 135,
+        spread: 80,
+        origin: { x: 1, y: 1 }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     function detectCurrentPage() {
