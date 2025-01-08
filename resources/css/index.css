@@ -11,6 +11,10 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: hsl(0, 0%, 10%);
 }
@@ -93,7 +97,7 @@ body {
 }
 
 .landing-page {
-    background-image: url("../images/landing-page-bg.webp");
+    background-image: url("../images/landing-page-bg1.webp");
     height: 100vh;
 
     background-attachment: fixed;
@@ -110,9 +114,72 @@ body {
     border-radius: 50px;
 }
 
+.about {
+    display: flex;
+}
+
+.about-text {
+    width: 90%;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.sections-container {
+    height: fit-content;
+    width: 90%;
+    gap: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    min-width: 300px;
+    min-height: 100px;
+    flex: 45%;
+}
+
+.section h2 {
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+
+.section ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    cursor: default;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.setup {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.setup div {
+    width: 45%;
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
 /* responsiveness */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 400px) {
     .landing-page {
       background-attachment: scroll;
     }
-  }
+}

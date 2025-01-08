@@ -1,3 +1,10 @@
+const imgURLs = [
+    "/resources/images/landing-page-bg1.webp",
+    "/resources/images/landing-page-bg2.webp"
+]
+
+document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(${imgURLs[Math.floor(Math.random() * imgURLs.length)]})`;
+
 const landerDot = document.getElementById('lander-dot');
 const aboutDot = document.getElementById('about-dot');
 const projectsDot = document.getElementById('projects-dot');
