@@ -98,7 +98,7 @@ body {
 
 .landing-page {
     background-image: url("../images/landing-page-bg1.webp");
-    height: 100vh;
+    min-height: 100%;
 
     background-attachment: fixed;
     background-position: center 0;
@@ -181,5 +181,13 @@ body {
 @media only screen and (max-device-width: 400px) {
     .landing-page {
       background-attachment: scroll;
+    }
+
+    .sections-container {
+        gap: 0;
+    }
+
+    .about-text {
+        padding: 10px;
     }
 }
