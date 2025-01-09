@@ -16,6 +16,7 @@ a {
 }
 
 body {
+    font-size: 100%;
     background-color: hsl(0, 0%, 10%);
 }
 
@@ -231,7 +232,7 @@ body {
 }
 
 /* responsiveness */
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-device-width: 800px) {
     .landing-page {
       background-attachment: scroll;
     }
