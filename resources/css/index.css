@@ -144,7 +144,7 @@ body {
 
 .about-text h1 {
     font-size: 2.5em;
-    border-bottom: 2px solid hsl(0, 0%, 60%);
+    border-bottom: 2px solid hsl(0, 0%, 30%);
     margin-bottom: 16px;
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 .section h2 {
-    border-bottom: 2px solid hsl(0, 0%, 60%);
+    border-bottom: 2px solid hsl(0, 0%, 30%);
     width: 100%;
 }
 
@@ -213,12 +213,12 @@ body {
     text-align: center;
     width: 90%;
     font-size: 2.5em;
-    border-bottom: 2px solid hsl(0, 0%, 60%);
+    border-bottom: 2px solid hsl(0, 0%, 30%);
     margin-bottom: 16px;
 }
 .project-card h2 {
     font-size: 1.5em;
-    border-bottom: 2px solid hsl(0, 0%, 60%);
+    border-bottom: 2px solid hsl(0, 0%, 30%);
     margin-bottom: 10px;
 }
 
