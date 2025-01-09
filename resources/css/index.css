@@ -134,7 +134,7 @@ body {
     width: 100%;
     padding: 10px;
     background-color: hsla(0, 0%, 10%, 0.6);
-    font-size: 3rem;
+    font-size: 3em;
     margin: 0;
 }
 
@@ -239,6 +239,11 @@ body {
 
 /* responsiveness */
 @media only screen and (max-device-width: 800px) {
+
+    .header {
+        font-size: 2em;
+    }
+
     .landing-page {
         background-position: center;
         background-attachment: scroll;
