@@ -234,7 +234,8 @@ body {
 /* responsiveness */
 @media only screen and (max-device-width: 800px) {
     .landing-page {
-      background-attachment: scroll;
+        background-position: center;
+        background-attachment: scroll;
     }
 
     .sections-container {
