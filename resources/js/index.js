@@ -10,10 +10,7 @@ const sounds = [
 
 document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(${imgURLs[Math.floor(Math.random() * imgURLs.length)]})`;
 
-const landerDot = document.getElementById('lander-dot');
-const aboutDot = document.getElementById('about-dot');
-const projectsDot = document.getElementById('projects-dot');
-
+const dots = document.querySelectorAll('.dot');
 
 const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -78,23 +75,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (currentSection) {
-            switch (currentSection.id) {
-                case 'welcome':
-                    landerDot.classList.add('active');
-                    aboutDot.classList.remove('active');
-                    projectsDot.classList.remove('active');
-                    break;
-                case 'about':
-                    landerDot.classList.remove('active');
-                    aboutDot.classList.add('active');
-                    projectsDot.classList.remove('active');
-                    break;
-                case 'projects':
-                    landerDot.classList.remove('active');
-                    aboutDot.classList.remove('active');
-                    projectsDot.classList.add('active');
-                    break;
-            }
+            dots.forEach(dot => {
+                if(dot.id !== `${currentSection.id}-dot`) {
+                    dot.classList.remove('active')
+                } else {
+                    dot.classList.add('active');
+                }
+            });
         }
     }
 
