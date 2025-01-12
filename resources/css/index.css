@@ -115,6 +115,7 @@ body {
 }
 
 .mobile-warning {
+    display: none;
     color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
 }
@@ -239,6 +240,10 @@ body {
 
 /* responsiveness */
 @media only screen and (max-device-width: 800px) {
+
+    .mobile-warning {
+        display: block;
+    }
 
     .header {
         font-size: 2em;
