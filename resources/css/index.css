@@ -60,9 +60,9 @@ body {
     background-color: hsla(0, 0%, 40%, 0.2);
     margin: 16px;
     position: fixed;
-    height: 100px;
+    height: 120px;
     right: 0;
-    top: 42%;
+    top: 40%;
 }
 
 .dot {
@@ -79,7 +79,7 @@ body {
 .active {
     background-color: hsl(0, 0%, 80%);
 
-    flex-grow: 5;
+    flex-grow: 6;
 }
 
 .page {

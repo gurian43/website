@@ -14,7 +14,17 @@ const sounds = [
     new Audio('/resources/sounds/yippe.mp3')
 ];
 
-randImg = imgURLs[Math.floor(Math.random() * imgURLs.length)];
+const sections = [
+    'lander',
+    'about',
+    'projects',
+    'stuff',
+    'contact'
+]
+
+let currentSection = null;
+
+let randImg = imgURLs[Math.floor(Math.random() * imgURLs.length)];
 
 document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(${randImg.url})`;
 document.getElementById('author').innerText = `art by ${randImg.author}`;
@@ -31,10 +41,20 @@ const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-const scrollToSection = (section) => {
-    const sectionElement = document.getElementById(section);
+const scrollToSection = (sectionID) => {
+    const sectionElement = document.getElementById(sectionID);
     if (sectionElement) {
         sectionElement.scrollIntoView({behavior: 'smooth'});
+    }
+}
+
+const scrollToNextSection = () => {
+    let nextSection = sections[sections.indexOf(currentSection.id)+1];
+
+    if (nextSection) {
+        scrollToSection(nextSection);
+    } else {
+        scrollToTop();
     }
 }
 
@@ -56,11 +76,17 @@ document.querySelector('.logo').addEventListener('click', () => {
     });
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.key == ' ') {
+        scrollToNextSection();
+        event.preventDefault();
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     function detectCurrentPage() {
         const sections = document.querySelectorAll('.page');
         const faders = document.querySelectorAll('.fade-in');
-        let currentSection = null;
 
         const appearOptions = {
             threshold: 0.1,
