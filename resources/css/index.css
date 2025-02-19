@@ -262,4 +262,8 @@ body {
     .about-text {
         padding: 10px;
     }
+
+    .flight-sim-kit {
+        display: none;
+    }
 }
