@@ -10,6 +10,7 @@
     <meta name="description" content="Gurian's personal website">
     <link rel="icon" type="image/x-icon" href="/resources/images/logo.webp">
     <link rel="stylesheet" href="resources/css/index.css">
+    <link rel="stylesheet" href="resources/css/stratagem-hero.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
     <title>Gurian</title>
 
@@ -31,7 +32,6 @@
                 <div onclick="scrollToSection('about')" id="about-dot" class="dot"></div>
                 <div onclick="scrollToSection('projects')" id="projects-dot" class="dot"></div>
                 <div onclick="scrollToSection('stuff')" id="stuff-dot" class="dot"></div>
-                <div onclick="scrollToSection('contact')" id="contact-dot" class="dot"></div>
             </div>
         </div> 
         <div class="landing-page page" id="lander">
@@ -127,16 +127,18 @@
         </div>
         <div class="separator"></div>
         <div class="stuff page fade-in" id="stuff">
-            <h1>MY STUFF</h1>
-            WIP 🛠️
+            <h1>Stratagem Hero</h1>
+            <div class="stratagem-div">
+                <img id="img" height="50px" width="50px"></img>
+                <p id="name"></p>
+                <div id="sequence"></div>
+            </div>
         </div>
         <div class="separator"></div>
-        <div class="contact page fade-in" id="contact">
-            <h1>CONTACT ME</h1>
-            WIP 🛠️
-        </div>
     </div>
 
+    <script src="resources/data/stratagem-data.js"></script>
     <script src="resources/js/index.js"></script>
+    <script src="resources/js/stratagem-hero.js"></script>
 </body>
 </html>

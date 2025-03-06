@@ -18,8 +18,7 @@ const sections = [
     'lander',
     'about',
     'projects',
-    'stuff',
-    'contact'
+    'stuff'
 ]
 
 let currentSection = null;
