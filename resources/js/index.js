@@ -76,6 +76,10 @@ document.querySelector('.logo').addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (event) => {
+    if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(event.code) > -1) {
+        event.preventDefault();
+    }
+
     if (event.key == ' ') {
         scrollToNextSection();
         event.preventDefault();
