@@ -239,6 +239,12 @@ body {
     opacity: 1;
 }
 
+.helldivers {
+    width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 /* responsiveness */
 @media only screen and (max-device-width: 800px) {
 
@@ -261,9 +267,5 @@ body {
 
     .about-text {
         padding: 10px;
-    }
-
-    .flight-sim-kit {
-        display: none;
     }
 }
