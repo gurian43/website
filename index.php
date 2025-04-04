@@ -1,3 +1,27 @@
+<?php
+
+require_once __DIR__ . '/php/utility/load_env.php';
+require_once __DIR__ . '/php/config/database.php';
+
+if(!isset($db)) {
+    loadEnv(__DIR__ . '/.env');
+    $db = new Database();
+    $conn = $db->connect();
+}
+
+if(isset($_GET['u'])) {
+    $url = $db->getUrl($_GET['u']);
+
+    if($url !== null) {
+        header('Location: ' . $url);
+        exit;
+    } else {
+        echo 'URL not found';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,28 +147,3 @@
     <script src="resources/js/stratagem-hero.js"></script>
 </body>
 </html>
-
-<?php
-
-require_once __DIR__ . '/php/utility/load_env.php';
-require_once __DIR__ . '/php/config/database.php';
-
-if(!isset($db)) {
-    loadEnv(__DIR__ . '/.env');
-    $db = new Database();
-    $conn = $db->connect();
-}
-
-if(isset($_GET['u'])) {
-    $url = $db->getUrl($_GET['u']);
-
-    if($url !== null) {
-        header('Location: ' . $url);
-        exit;
-    } else {
-        echo 'URL not found';
-    }
-    $stmt->close();
-}
-
-?>
