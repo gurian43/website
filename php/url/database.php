@@ -8,9 +8,6 @@ class Database {
     private $conn;
 
     public function __construct() {
-        require_once __DIR__ . '../utility/load_env.php';
-        loadEnv(__DIR__ . '../../.env');
-        
         $this->host = $_ENV['DB_HOST'];
         $this->db_name = $_ENV['DB_NAME'];
         $this->username = $_ENV['DB_USER'];

@@ -19,11 +19,10 @@
 
 
 <?php
-
 require_once __DIR__ . '/../utility/load_env.php';
-loadEnv(__DIR__ . '/../../.env');
+require_once __DIR__ . '/database.php';
 
-include 'database.php';
+loadEnv(__DIR__ . '/../../.env');
 
 $db = new Database();
 $conn = $db->connect();
