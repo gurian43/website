@@ -58,6 +58,6 @@ class Database {
             return null;
         }
     }
-
 }
+
 ?>

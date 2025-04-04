@@ -19,24 +19,15 @@
 
 
 <?php
+
 require_once __DIR__ . '/../utility/load_env.php';
-require_once __DIR__ . '/database.php';
+require_once __DIR__ . '/../config/database.php';
 
-loadEnv(__DIR__ . '/../../.env');
 
-$db = new Database();
-$conn = $db->connect();
-
-if(isset($_GET['url'])) {
-    $url = $db->getUrl($_GET['url']);
-
-    if($url !== null) {
-        header('Location: ' . $url);
-        exit;
-    } else {
-        echo 'URL not found';
-    }
-    $stmt->close();
+if(!isset($db)) {
+    loadEnv(__DIR__ . '/../../.env');
+    $db = new Database();
+    $conn = $db->connect();
 }
 
 if(isset($_POST['url'])) {
@@ -47,7 +38,7 @@ if(isset($_POST['url'])) {
         $unique_id = $db->shortenUrl($url);
     
         if($unique_id !== null) {
-            echo 'URL was shortened to ' . "$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/?url=$unique_id";
+            echo 'URL was shortened to ' . "$_SERVER[HTTP_HOST]/?u=$unique_id";
         } else {
             echo 'Error: ' . $conn->error;
         }
@@ -56,4 +47,5 @@ if(isset($_POST['url'])) {
         exit;
     }
 }
+
 ?>

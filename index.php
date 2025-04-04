@@ -123,3 +123,27 @@
     <script src="resources/js/stratagem-hero.js"></script>
 </body>
 </html>
+<?php
+
+require_once __DIR__ . '/../utility/load_env.php';
+require_once __DIR__ . '/../config/database.php';
+
+if(!isset($db)) {
+    loadEnv(__DIR__ . '/../../.env');
+    $db = new Database();
+    $conn = $db->connect();
+}
+
+if(isset($_GET['u'])) {
+    $url = $db->getUrl($_GET['u']);
+
+    if($url !== null) {
+        header('Location: ' . $url);
+        exit;
+    } else {
+        echo 'URL not found';
+    }
+    $stmt->close();
+}
+
+?>
