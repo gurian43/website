@@ -123,13 +123,14 @@
     <script src="resources/js/stratagem-hero.js"></script>
 </body>
 </html>
+
 <?php
 
-require_once __DIR__ . '/../utility/load_env.php';
-require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/php/utility/load_env.php';
+require_once __DIR__ . '/php/config/database.php';
 
 if(!isset($db)) {
-    loadEnv(__DIR__ . '/../../.env');
+    loadEnv(__DIR__ . '/.env');
     $db = new Database();
     $conn = $db->connect();
 }
