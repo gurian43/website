@@ -50,7 +50,7 @@ class Database {
 
     public function shortenUrl($url) {
         $unique_id = uniqid();
-        $stmt = $this->conn->prepare("INSERT INTO urls (id, target) VALUES (?, ?)");
+        $stmt = $this->conn->prepare("INSERT INTO url_shortener (id, target) VALUES (?, ?)");
         $stmt->bind_param("ss", $unique_id, $url);
         if($stmt->execute() === TRUE) {
             return $unique_id;
