@@ -20,6 +20,9 @@
 
 <?php
 
+require_once __DIR__ . '../utility/load_env.php';
+loadEnv(__DIR__ . '../../.env');
+
 include 'database.php';
 
 $db = new Database();
