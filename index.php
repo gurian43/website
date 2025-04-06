@@ -48,7 +48,7 @@ if(isset($_GET['u'])) {
     <div class="container">
         <div class="fixed">
             <img alt="logo" src="resources/images/logo.webp" class="logo scaling" loading="lazy">
-            <div class="scroll-button scaling" onclick="scrollToTop()">
+            <div class="scroll-button scaling" onclick="scrollToTop()" style="font-size: 24px;">
                 ↑
             </div>
             <div class="scrollbar">
@@ -118,13 +118,17 @@ if(isset($_GET['u'])) {
         <div class="projects page fade-in" id="projects">
             <h1>PROJECTS</h1>
             <div class="sections-container">
-                <div class="section">
+                <div class="section project-section">
+                    <img src="./resources/images/rin.webp" alt="rin" class="project-preview">
                     <h2>Discord Bot "Rin"</h2>
-                    <p>General purpose discord bot tailored for one of the SCP:SL community servers. My biggest project yet.</p>
+                    <p>General purpose discord bot</p>
                 </div>
-                <div class="section">
-                    <h2>nothing notable</h2>
-                    <p>more soon to come</p>
+                <div class="section project-section">
+                    <a href="https://lewdguri-site.vercel.app/" target="_blank" rel="noreferrer noopener">
+                        <img src="./resources/images/terminal.webp" alt="terminal" class="project-preview">
+                    </a>
+                    <h2>Old Website</h2>
+                    <p>Terminal-style personal website</p>
                 </div>
             </div>
         </div>
@@ -139,7 +143,6 @@ if(isset($_GET['u'])) {
                 <div id="sequence"></div>
             </div>
         </div>
-        <div class="separator"></div>
     </div>
 
     <script src="resources/data/stratagem-data.js"></script>

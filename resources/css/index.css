@@ -158,7 +158,7 @@ body {
 .sections-container {
     height: fit-content;
     width: 90%;
-    gap: 10%;
+    gap: 40px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -224,10 +224,28 @@ body {
     border-bottom: 2px solid hsl(0, 0%, 30%);
     margin-bottom: 16px;
 }
-.project-card h2 {
-    font-size: 1.5em;
-    border-bottom: 2px solid hsl(0, 0%, 30%);
+
+.project-section {
+    text-align: center;
+    width: 100px;
+}
+
+.project-section h2 {
+    border-top: 2px solid hsl(0, 0%, 30%);
+    padding-top: 10px;
+    border-bottom: none;
+}
+
+.project-preview {
+    height: 10em;
     margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.project-section a {
+    display: block;
+    align-items: center;
+    height: 170px;
 }
 
 .fade-in {
