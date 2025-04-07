@@ -21,6 +21,7 @@ const sections = [
     'stuff'
 ]
 
+const discord = document.getElementById('discord');
 let currentSection = null;
 
 let randImg = imgURLs[Math.floor(Math.random() * imgURLs.length)];

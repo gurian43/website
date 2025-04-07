@@ -76,16 +76,17 @@ if(isset($_GET['u'])) {
                 <div class="section">
                     <h2>SOCIALS</h2>
                     <ul>
-                        <li class="scaling"><a href="https://github.com/gurian43" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                        <li class="scaling"><a href="https://steamcommunity.com/profiles/76561198273615787" target="_blank" rel="noopener noreferrer">Steam</a></li>
+                        <li class="scaling"><a class="socials" href="https://github.com/gurian43" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="/resources/images/github.png">GitHub</a></li>
+                        <li class="scaling"><a class="socials" href="https://steamcommunity.com/profiles/76561198273615787" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="/resources/images/steam.png">Steam</a></li>
+                        <li class="scaling"><a class="socials"><img class="socials-logo" src="/resources/images/discord.png">@gurian43</a></li>
                     </ul>
                 </div>
                 <div class="section">
                     <h2>OTHER LINKS</h2>
                     <ul>
-                        <li class="scaling"><a href="https://imgur.com/a/ca8wsp8/" target="_blank" rel="noopener noreferrer">Rin Art Gallery</a></li>
-                        <li class="scaling"><a href="https://github.com/gurian43/website" target="_blank" rel="noopener noreferrer">Source Code</a></li>
-                        <li class="scaling"><a href="https://steamcommunity.com/tradeoffer/new/?partner=313350059&token=nOZ6_-4V" target="_blank" rel="noopener noreferrer">Steam Trade Link</a></li>
+                        <li class="scaling"><a class="socials" href="https://imgur.com/a/ca8wsp8/" target="_blank" rel="noopener noreferrer">Rin Art Gallery</a></li>
+                        <li class="scaling"><a class="socials" href="https://github.com/gurian43/website" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+                        <li class="scaling"><a class="socials" href="https://steamcommunity.com/tradeoffer/new/?partner=313350059&token=nOZ6_-4V" target="_blank" rel="noopener noreferrer">Steam Trade Link</a></li>
                     </ul>
                 </div>
                 <!--

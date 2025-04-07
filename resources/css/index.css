@@ -163,6 +163,20 @@ body {
     flex-wrap: wrap;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.socials-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 .section {
     min-width: 300px;
     min-height: 100px;
