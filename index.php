@@ -69,7 +69,8 @@ if(isset($_GET['u'])) {
         <div class="about page fade-in" id="about">
             <div class="about-text">
                 <h1>ABOUT ME</h1>
-                <p>IT Student</p>
+                <p id="me">IT Student</p>
+                <script>document.getElementById("me").innerText = 2025-2008 + "yo IT Student"</script>
             </div>
             <div class="sections-container">
                 <div class="section">
