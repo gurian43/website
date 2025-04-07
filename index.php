@@ -88,6 +88,7 @@ if(isset($_GET['u'])) {
                         <li class="scaling"><a href="https://steamcommunity.com/tradeoffer/new/?partner=313350059&token=nOZ6_-4V" target="_blank" rel="noopener noreferrer">Steam Trade Link</a></li>
                     </ul>
                 </div>
+                <!--
                 <div class="section">
                     <h2>PC SPECS</h2>
                     <div class="setup">
@@ -113,6 +114,7 @@ if(isset($_GET['u'])) {
                         </div>
                     </div>                    
                 </div>
+                -->
             </div>
         </div>
         <div class="separator"></div>
