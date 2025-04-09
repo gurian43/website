@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
+    header('Location: admin.php');
+    exit;
+}
+
+require_once __DIR__ . '/../php/config/database.php';
+require_once __DIR__ . '/../php/config/env.php';
+
+loadEnv('/.env');
+
+$db = new Database();
+$conn = $db->connect();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,20 +40,11 @@
 
 <?php
 
-require_once __DIR__ . '/../php/config/database.php';
-require_once __DIR__ . '/../php/config/env.php';
-
-loadEnv(__DIR__ . '/../.env');
-
-$db = new Database();
-$conn = $db->connect();
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     if ($db->authenticate($username, $password)) {
-        session_start();
         $_SESSION['user_id'] = 1;
         header('Location: admin.php');
         exit;

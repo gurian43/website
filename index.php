@@ -4,7 +4,7 @@ require_once __DIR__ . '/php/utility/load_env.php';
 require_once __DIR__ . '/php/config/database.php';
 
 if(!isset($db)) {
-    loadEnv(__DIR__ . '/.env');
+    loadEnv('/.env');
     $db = new Database();
     $conn = $db->connect();
 }
