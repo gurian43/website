@@ -58,6 +58,18 @@ class Database {
             return null;
         }
     }
+
+    public function getProjects() {
+        $stmt = $this->conn->prepare("SELECT * FROM projects");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return $result->fetch_all(MYSQLI_ASSOC);
+        } else {
+            return null;
+        }
+    }
 }
 
 ?>

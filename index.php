@@ -121,18 +121,23 @@ if(isset($_GET['u'])) {
         <div class="projects page fade-in" id="projects">
             <h1>PROJECTS</h1>
             <div class="sections-container">
-                <div class="section project-section">
-                    <img src="./resources/images/rin.webp" alt="rin" class="project-preview">
-                    <h2>Discord Bot "Rin"</h2>
-                    <p>General purpose discord bot</p>
-                </div>
-                <div class="section project-section">
-                    <a href="https://lewdguri-site.vercel.app/" target="_blank" rel="noreferrer noopener">
-                        <img src="./resources/images/terminal.webp" alt="terminal" class="project-preview">
-                    </a>
-                    <h2>Old Website</h2>
-                    <p>Terminal-style personal website</p>
-                </div>
+                <?php
+                $projects = $db->getProjects();
+                
+                foreach($projects as $project) {
+                    echo '<div class="section project-section">';
+                    if(isset($project['project_url'])) {
+                        echo '<a href="' . $project['project_url'] . '" target="_blank" rel="noreferrer noopener">';
+                    } else {
+                        echo '<a>';
+                    }
+                    echo '<img src="' . $project['image_url'] . '" alt="' . $project['name'] . '" class="project-preview">';
+                    echo '</a>';
+                    echo '<h2>' . $project['name'] . '</h2>';
+                    echo '<p>' . $project['description'] . '</p>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
         <div class="separator"></div>
