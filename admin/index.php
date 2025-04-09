@@ -1,13 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 session_start();
-
-if (!session_start()) {
-    die('Failed to start session');
-}
 
 if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
     header('Location: admin.php');
@@ -15,15 +8,12 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
 }
 
 require_once __DIR__ . '/../php/config/database.php';
-require_once __DIR__ . '/../php/config/env.php';
+require_once __DIR__ . '/../php/config/load_env.php';
 
 loadEnv(__DIR__ . '/../.env');
 
 $db = new Database();
 $conn = $db->connect();
-if (!$conn) {
-    die('Database connection failed: ' . mysqli_connect_error());
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
