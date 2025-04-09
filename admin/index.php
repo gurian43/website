@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
 }
 
 require_once __DIR__ . '/../php/config/database.php';
-require_once __DIR__ . '/../php/config/load_env.php';
+require_once __DIR__ . '/../php/utility/load_env.php';
 
 loadEnv(__DIR__ . '/../.env');
 
