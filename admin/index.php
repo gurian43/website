@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
+if(isset($_SESSION['user_id'])) {
     header('Location: admin.php');
     exit;
 }
@@ -13,6 +13,7 @@ loadEnv(__DIR__ . '/../.env');
 
 $db = new Database();
 $conn = $db->connect();
+
 ?>
 
 <!DOCTYPE html>
