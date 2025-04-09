@@ -70,6 +70,19 @@ class Database {
             return null;
         }
     }
+
+    public function authenticate($input_username, $input_password) {
+        $stmt = $this->conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+        $stmt->bind_param("ss", $input_username, $input_password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>
