@@ -14,6 +14,8 @@ loadEnv(__DIR__ . '/../.env');
 $db = new Database();
 $conn = $db->connect();
 
+$error = '';
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +29,7 @@ $conn = $db->connect();
 </head>
 <body>
     <div class="container">
+        <?php if ($error) { echo '<p class="error">' . $error . "</p>"; } ?>
         <form action="#" method="POST">
             <div class="login-container">
                 <h1>Admin Login</h1>
@@ -50,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: admin.php');
         exit;
     } else {
-        echo '<p class="error">Invalid username or password</p>';
+        $error = 'Invalid username or password';
     }
 }
 

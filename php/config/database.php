@@ -79,7 +79,7 @@ class Database {
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            return password_verify(password_hash($input_password, PASSWORD_DEFAULT), $row['password']);
+            return password_verify($input_password, $row['password']);
         } else {
             return false;
         }
