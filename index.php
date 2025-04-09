@@ -123,13 +123,13 @@ if(isset($_GET['u'])) {
             <div class="sections-container">
                 <?php
                 $projects = $db->getProjects();
-                
+
                 foreach($projects as $project) {
                     echo '<div class="section project-section">';
                     if(isset($project['project_url'])) {
                         echo '<a href="' . $project['project_url'] . '" target="_blank" rel="noreferrer noopener">';
                     } else {
-                        echo '<a>';
+                        echo '<a onclick="return false;">';
                     }
                     echo '<img src="' . $project['image_url'] . '" alt="' . $project['name'] . '" class="project-preview">';
                     echo '</a>';
