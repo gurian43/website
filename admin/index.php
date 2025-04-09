@@ -9,7 +9,7 @@ if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1) {
 require_once __DIR__ . '/../php/config/database.php';
 require_once __DIR__ . '/../php/config/env.php';
 
-loadEnv('/.env');
+loadEnv(__DIR__ . '/../.env');
 
 $db = new Database();
 $conn = $db->connect();

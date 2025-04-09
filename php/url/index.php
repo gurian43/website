@@ -25,7 +25,7 @@ require_once __DIR__ . '/../config/database.php';
 
 
 if(!isset($db)) {
-    loadEnv('/.env');
+    loadEnv(__DIR__ . '/../../.env');
     $db = new Database();
     $conn = $db->connect();
 }
