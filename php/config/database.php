@@ -72,13 +72,14 @@ class Database {
     }
 
     public function authenticate($input_username, $input_password) {
-        $stmt = $this->conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
-        $stmt->bind_param("ss", $input_username, $input_password);
+        $stmt = $this->conn->prepare("SELECT password FROM users WHERE username = ?");
+        $stmt->bind_param("s", $input_username);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            return true;
+            $row = $result->fetch_assoc();
+            return password_verify(password_hash($input_password, PASSWORD_DEFAULT), $row['password']);
         } else {
             return false;
         }
