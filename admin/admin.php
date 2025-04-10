@@ -32,7 +32,7 @@ if(!isset($_SESSION['user_id'])) {
                 <input type="text" name="project_name" placeholder="Project Name*" required>
                 <input type="text" name="project_url" placeholder="Project URL">
                 <textarea name="project_description" placeholder="Project Description*" required></textarea>
-                <input type="file" name="project_image" placeholder="Project Image*" required>
+                <input type="file" name="project_image" required>
                 <input type="submit" value="Add Project">
             </form>
             <form action="remove_project.php" method="POST" autocomplete="off">

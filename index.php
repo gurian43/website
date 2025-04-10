@@ -88,33 +88,6 @@ if(isset($_GET['u'])) {
                         <li class="scaling"><a class="socials" href="https://steamcommunity.com/tradeoffer/new/?partner=313350059&token=nOZ6_-4V" target="_blank" rel="noopener noreferrer">Steam Trade Link</a></li>
                     </ul>
                 </div>
-                <!--
-                <div class="section">
-                    <h2>PC SPECS</h2>
-                    <div class="setup">
-                        <div>
-                            <h3>Motherboard</h3>
-                            <p>Gigabyte B550 Gaming X V2</p>
-                        </div>
-                        <div>
-                            <h3>GPU</h3>
-                            <p>Nvidia RTX 3070Ti Founders Edition</p>
-                        </div>
-                        <div>
-                            <h3>CPU</h3>
-                            <p>AMD Ryzen 7 5800X3D</p>
-                        </div>
-                        <div>
-                            <h3>RAM</h3>
-                            <p>Kingston Fury 2x16GB DDR4 3200MHz</p>
-                        </div>
-                        <div>
-                            <h3>SSD</h3>
-                            <p>WD Black SN770 NVMe 1TB</p>
-                        </div>
-                    </div>                    
-                </div>
-                -->
             </div>
         </div>
         <div class="separator"></div>
@@ -127,14 +100,14 @@ if(isset($_GET['u'])) {
                 foreach($projects as $project) {
                     echo '<div class="section project-section">';
                     if($project['project_url'] != "") {
-                        echo '<a href="' . $project['project_url'] . '" target="_blank" rel="noreferrer noopener">';
+                        echo '<a href="' . htmlspecialchars($project['project_url']) . '" target="_blank" rel="noreferrer noopener">';
                     } else {
                         echo '<a onclick="return false;">';
                     }
-                    echo '<img src="' . $project['image_url'] . '" alt="' . $project['name'] . '" class="project-preview">';
+                    echo '<img src="' . htmlspecialchars($project['image']) . '" alt="' . htmlspecialchars($project['name']) . '" class="project-preview">';
                     echo '</a>';
-                    echo '<h2>' . $project['name'] . '</h2>';
-                    echo '<p>' . $project['description'] . '</p>';
+                    echo '<h2>' . htmlspecialchars($project['name']) . '</h2>';
+                    echo '<p>' . htmlspecialchars($project['description']) . '</p>';
                     echo '</div>';
                 }
                 ?>

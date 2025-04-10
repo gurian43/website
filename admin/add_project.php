@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $file_size = $_FILES['project_image']['size'];
         $file_type = mime_content_type($file_tmp_path);
 
-        $allowed_types = ['image/jpeg', 'image/png', 'image/gif'];
+        $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/jpg'];
         $max_file_size = 10 * 1024 * 1024;
 
         if(in_array($file_type, $allowed_types) && $file_size <= $max_file_size) {
