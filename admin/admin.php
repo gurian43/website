@@ -27,7 +27,7 @@ if(!isset($_SESSION['user_id'])) {
             <input type="submit" value="logout">
         </form>
         <div class="admin-actions">
-            <form action="add_project.php" method="POST" enctype="multipart/form-data">
+            <form action="add_project.php" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <h2>Add Project</h2>
                 <input type="text" name="project_name" placeholder="Project Name*" required>
                 <input type="text" name="project_url" placeholder="Project URL">
@@ -35,7 +35,7 @@ if(!isset($_SESSION['user_id'])) {
                 <input type="file" name="project_image" placeholder="Project Image*" required>
                 <input type="submit" value="Add Project">
             </form>
-            <form action="remove_project.php" method="POST">
+            <form action="remove_project.php" method="POST" autocomplete="off">
                 <h2>Remove Project</h2>
                 <input type="text" name="project_id" placeholder="Project ID*" required>
                 <input type="submit" value="Remove Project">

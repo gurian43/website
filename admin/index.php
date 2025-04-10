@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container">
         <?php if ($error) { echo '<p class="error">' . $error . "</p>"; } ?>
-        <form action="#" method="POST">
+        <form action="#" method="POST" autocomplete="off">
             <div class="login-container">
                 <h1>Admin Login</h1>
                 <input type="text" name="username" placeholder="Username" required>
