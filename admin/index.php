@@ -16,6 +16,19 @@ $conn = $db->connect();
 
 $error = '';
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($db->authenticate($username, $password)) {
+        $_SESSION['user_id'] = 1;
+        header('Location: admin.php');
+        exit;
+    } else {
+        $error = 'Invalid username or password';
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -41,20 +54,3 @@ $error = '';
     </div>
 </body>
 </html>
-
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if ($db->authenticate($username, $password)) {
-        $_SESSION['user_id'] = 1;
-        header('Location: admin.php');
-        exit;
-    } else {
-        $error = 'Invalid username or password';
-    }
-}
-
-?>

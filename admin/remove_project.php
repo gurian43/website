@@ -20,6 +20,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($db->removeProject($project_id)) {
         echo "Project removed successfully.";
+        header('Location: admin.php');
+        exit;
     } else {
         echo "Failed to remove project.";
     }

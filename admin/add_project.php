@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $project_name = $_POST['project_name'];
     $project_description = $_POST['project_description'];
     $project_url = $_POST['project_url'];
-    
+
     if(isset($_FILES['project_image']) && $_FILES['project_image']['error'] === UPLOAD_ERR_OK) {
         $file_tmp_path = $_FILES['project_image']['tmp_name'];
         $file_name = $_FILES['project_image']['name'];
@@ -49,6 +49,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($db->addProject($project_name, $project_description, $project_url, $image_url)) {
         echo "Project added successfully.";
+        header('Location: admin.php');
+        exit;
     } else {
         echo "Failed to add project.";
     }
