@@ -27,7 +27,7 @@ if(!isset($_SESSION['user_id'])) {
             <input type="submit" value="logout">
         </form>
         <div class="admin-actions">
-            <form action="add_project.php" method="POST">
+            <form action="add_project.php" method="POST" enctype="multipart/form-data">
                 <h2>Add Project</h2>
                 <input type="text" name="project_name" placeholder="Project Name*" required>
                 <input type="text" name="project_url" placeholder="Project URL">
