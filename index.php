@@ -104,7 +104,7 @@ if(isset($_GET['u'])) {
                     } else {
                         echo '<a onclick="return false;">';
                     }
-                    echo '<img src="' . htmlspecialchars($project['image']) . '" alt="' . htmlspecialchars($project['name']) . '" class="project-preview">';
+                    echo '<img src="' . htmlspecialchars($project['image_url']) . '" alt="' . htmlspecialchars($project['name']) . '" class="project-preview">';
                     echo '</a>';
                     echo '<h2>' . htmlspecialchars($project['name']) . '</h2>';
                     echo '<p>' . htmlspecialchars($project['description']) . '</p>';
