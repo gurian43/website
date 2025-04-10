@@ -31,7 +31,7 @@ if(!isset($_SESSION['user_id'])) {
                 <h2>Add Project</h2>
                 <input type="text" name="project_name" placeholder="Project Name*" required>
                 <input type="text" name="project_url" placeholder="Project URL">
-                <textarea wrap="soft" name="project_description" placeholder="Project Description*" required>
+                <textarea wrap="soft" name="project_description" placeholder="Project Description*" required>My Project</textarea>
                 <input type="file" name="project_image" placeholder="Project Image*" required>
                 <input type="submit" value="Add Project">
             </form>
