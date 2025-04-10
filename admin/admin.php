@@ -32,7 +32,7 @@ if(!isset($_SESSION['user_id'])) {
                 <h2>Add Project</h2>
                 <input type="text" name="project_name" placeholder="Project Name*" required>
                 <input type="text" name="project_url" placeholder="Project URL">
-                <textarea name="project_description" placeholder="Project Description*" required></textarea>
+                <textarea wrap="hard" name="project_description" placeholder="Project Description*" required></textarea>
                 <input type="file" name="project_image" placeholder="Project Image*" required>
                 <input type="submit" value="Add Project">
             </form>
