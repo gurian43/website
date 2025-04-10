@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     width: 100%;
     height: 100vh;
     background-color: hsla(0, 0%, 10%, 0.6);
@@ -19,7 +20,7 @@ input {
     margin-bottom: 20px;
 }
 
-.login-container {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +33,7 @@ input {
     border-radius: 10px;
 }
 
-.login-container input[type="submit"] {
+form input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -44,6 +45,32 @@ input {
     transition: background-color 0.15s;
 }
 
-.login-container input[type="submit"]:hover {
+form input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: hsl(0, 0%, 20%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.admin-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: hsl(0, 0%, 20%);
+    padding: 20px;
+    border-radius: 10px;
 }

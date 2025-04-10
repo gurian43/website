@@ -84,6 +84,18 @@ class Database {
             return false;
         }
     }
+
+    public function removeProject($id) {
+        $stmt = $this->conn->prepare("DELETE FROM projects WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        return $stmt->execute();
+    }
+
+    public function addProject($name, $description, $project_url, $image_url) {
+        $stmt = $this->conn->prepare("INSERT INTO projects (name, description, project_url, image_url) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $name, $description, $project_url, $image_url);
+        return $stmt->execute();
+    }
 }
 
 ?>
