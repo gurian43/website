@@ -71,6 +71,19 @@ class Database {
         }
     }
 
+    public function getProjectByID($id) {
+        $stmt = $this->conn->prepare("SELECT * FROM projects WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return null;
+        }
+    }
+
     public function authenticate($input_username, $input_password) {
         $stmt = $this->conn->prepare("SELECT password FROM users WHERE username = ?");
         $stmt->bind_param("s", $input_username);

@@ -18,7 +18,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $project_id = $_POST['project_id'];
 
+    $project = $db->getProjectById($project_id);
+
     if($db->removeProject($project_id)) {
+
+        $image_path = __DIR__ . '/../resources/public/' . basename($project['image_url']);
+        if(file_exists($image_path)) {
+            unlink($image_path);
+        } else {
+            echo "Image file not found.";
+        }
+
         echo "Project removed successfully.";
         header('Location: admin.php');
         exit;
