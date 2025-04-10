@@ -126,7 +126,7 @@ if(isset($_GET['u'])) {
 
                 foreach($projects as $project) {
                     echo '<div class="section project-section">';
-                    if(isset($project['project_url'])) {
+                    if($project['project_url'] != "") {
                         echo '<a href="' . $project['project_url'] . '" target="_blank" rel="noreferrer noopener">';
                     } else {
                         echo '<a onclick="return false;">';

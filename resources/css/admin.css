@@ -20,6 +20,15 @@ input, textarea {
     margin-bottom: 20px;
 }
 
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
 form {
     display: flex;
     flex-direction: column;

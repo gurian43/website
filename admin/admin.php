@@ -16,6 +16,7 @@ if(!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/resources/images/logo.webp">
     <link rel="stylesheet" href="/resources/css/index.css">
     <link rel="stylesheet" href="/resources/css/admin.css">
     <title>Admin Page</title>
