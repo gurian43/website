@@ -26,13 +26,13 @@ if(isset($_GET['u'])) {
 <html lang="en">
 <head>
     <link rel="preload" href="resources/css/index.css" as="style">
-    <link rel="preload" href="/resources/images/logo.webp" as="image">
+    <link rel="preload" href="resources/images/logo.webp" as="image">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" as="style">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gurian's personal website">
-    <link rel="icon" type="image/x-icon" href="/resources/images/logo.webp">
+    <link rel="icon" type="image/x-icon" href="resources/images/logo.webp">
     <link rel="stylesheet" href="resources/css/index.css">
     <link rel="stylesheet" href="resources/css/stratagem-hero.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
@@ -41,7 +41,7 @@ if(isset($_GET['u'])) {
     <meta content="Gurian's Website" property="og:title" />
     <meta content="cool stuff and more stuff" property="og:description" />
     <meta content="https://gurian-website.vercel.app" property="og:url" />
-    <meta content="/resources/images/logo.webp" property="og:image" />
+    <meta content="resources/images/logo.webp" property="og:image" />
     <meta content="#d3d3ff" data-react-helmet="true" name="theme-color" />
 </head>
 <body>
@@ -75,9 +75,9 @@ if(isset($_GET['u'])) {
                 <div class="section">
                     <h2>SOCIALS</h2>
                     <ul>
-                        <li class="scaling"><a class="socials" href="https://github.com/gurian43" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="/resources/images/github.png">GitHub</a></li>
-                        <li class="scaling"><a class="socials" href="https://steamcommunity.com/profiles/76561198273615787" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="/resources/images/steam.png">Steam</a></li>
-                        <li class="scaling"><a class="socials"><img class="socials-logo" src="/resources/images/discord.png">@gurian43</a></li>
+                        <li class="scaling"><a class="socials" href="https://github.com/gurian43" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="resources/images/github.png">GitHub</a></li>
+                        <li class="scaling"><a class="socials" href="https://steamcommunity.com/profiles/76561198273615787" target="_blank" rel="noopener noreferrer"><img class="socials-logo" src="resources/images/steam.png">Steam</a></li>
+                        <li class="scaling"><a class="socials"><img class="socials-logo" src="resources/images/discord.png">@gurian43</a></li>
                     </ul>
                 </div>
                 <div class="section">

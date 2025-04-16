@@ -27,7 +27,7 @@ const arrowPreloadImages = [
 let images = [];
 for (i = 0; i < arrowPreloadImages.length; i++) {
     images[i] = new Image();
-    images[i].src = `/resources/images/arrows/${arrowPreloadImages[i]}.png`;
+    images[i].src = `./resources/images/arrows/${arrowPreloadImages[i]}.png`;
 }
 
 stratagemData.forEach(element => {
@@ -57,16 +57,16 @@ const updateSequence = () => {
         let arrow = document.createElement("img");
         switch(currentStratagem.sequence[i]) {
             case "left":
-                arrow.src = `/resources/images/arrows/${isActivated? "leftArrowDone" : "leftArrow"}.png`
+                arrow.src = `./resources/images/arrows/${isActivated? "leftArrowDone" : "leftArrow"}.png`
                 break;
             case "up":
-                arrow.src = `/resources/images/arrows/${isActivated? "upArrowDone" : "upArrow"}.png`
+                arrow.src = `./resources/images/arrows/${isActivated? "upArrowDone" : "upArrow"}.png`
                 break;
             case "down":
-                arrow.src = `/resources/images/arrows/${isActivated? "downArrowDone" : "downArrow"}.png`
+                arrow.src = `./resources/images/arrows/${isActivated? "downArrowDone" : "downArrow"}.png`
                 break;
             case "right":
-                arrow.src = `/resources/images/arrows/${isActivated? "rightArrowDone" : "rightArrow"}.png`
+                arrow.src = `./resources/images/arrows/${isActivated? "rightArrowDone" : "rightArrow"}.png`
                 break;
         }
         sequenceElement.appendChild(arrow);
@@ -77,7 +77,7 @@ const newStratagem = () => {
     currentStratagem = stratagemList[Math.floor(Math.random() * stratagemList.length)];
     currentStratagem.currentIndex = 0;
     document.getElementById("name").innerHTML = currentStratagem.name;
-    document.getElementById("img").src = `/resources/images/stratagems/${currentStratagem.name.replace(/['"]+/g, '')}.svg`;
+    document.getElementById("img").src = `./resources/images/stratagems/${currentStratagem.name.replace(/['"]+/g, '')}.svg`;
     document.getElementById("img").alt = currentStratagem.name;
     updateSequence();
 }
