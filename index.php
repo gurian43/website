@@ -56,6 +56,7 @@ if(isset($_GET['u'])) {
                 <div onclick="scrollToSection('about')" id="about-dot" class="dot"></div>
                 <div onclick="scrollToSection('projects')" id="projects-dot" class="dot"></div>
                 <div onclick="scrollToSection('stuff')" id="stuff-dot" class="dot"></div>
+                <div onclick="scrollToSection('contact')" id="contact-dot" class="dot"></div>
             </div>
         </div> 
         <div class="landing-page page" id="lander">
@@ -123,6 +124,10 @@ if(isset($_GET['u'])) {
                 <p id="name"></p>
                 <div id="sequence"></div>
             </div>
+        </div>
+        <div class="separator"></div>
+        <div class="contact page fade-in" id="contact">
+            <p>WIP 🛠️</p>
         </div>
     </div>
 

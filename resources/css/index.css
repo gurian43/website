@@ -60,9 +60,9 @@ body {
     background-color: hsla(0, 0%, 40%, 0.2);
     margin: 16px;
     position: fixed;
-    height: 120px;
+    height: 140px;
     right: 0;
-    top: 40%;
+    top: 38%;
 }
 
 .dot {
