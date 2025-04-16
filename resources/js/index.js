@@ -1,17 +1,17 @@
 const imgURLs = [
     {
-        url: "/resources/images/landing-page-bg1.webp",
+        url: "./resources/images/landing-page-bg1.webp",
         author: "narukami tooru ❤️"
     },
     {
-        url: "/resources/images/landing-page-bg2.webp",
+        url: "./resources/images/landing-page-bg2.webp",
         author: "narukami tooru ❤️"
     }
 ]
 
 const sounds = [
-    new Audio('/resources/sounds/win.mp3'), 
-    new Audio('/resources/sounds/yippe.mp3')
+    new Audio('./resources/sounds/win.mp3'), 
+    new Audio('./resources/sounds/yippe.mp3')
 ];
 
 const sections = [
@@ -31,7 +31,7 @@ document.getElementById('author').innerText = `art by ${randImg.author}`;
 
 //1 in 10 to get miku :3
 if(Math.random() < 0.1) {
-    document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(/resources/images/miku.webp)`;
+    document.getElementsByClassName('landing-page')[0].style.backgroundImage = `url(./resources/images/miku.webp)`;
     document.getElementById('author').innerText = `art by koafreedraw`;
 }
 
