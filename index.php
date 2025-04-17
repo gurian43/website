@@ -127,7 +127,15 @@ if(isset($_GET['u'])) {
         </div>
         <div class="separator"></div>
         <div class="contact page fade-in" id="contact">
-            <p>WIP 🛠️</p>
+            <form action="./php/actions/add_message.php" autocomplete="off" method="POST">
+                <h1>LEAVE ME A MESSAGE :3</h1>
+                <div class="contact-form">
+                    <input type="text" name="name" placeholder="Name*" required></input>
+                    <input type="email" name="email" placeholder="Email"></input>
+                    <textarea name="message" placeholder="Message*" required></textarea>
+                    <input type="submit" value="Send"></input>
+                </div>
+            </form>
         </div>
     </div>
 

@@ -109,6 +109,30 @@ class Database {
         $stmt->bind_param("ssss", $name, $description, $project_url, $image_url);
         return $stmt->execute();
     }
+
+    public function addMessage($name, $email, $message) {
+        $stmt = $this->conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
+        return $stmt->execute();
+    }
+
+    public function getMessages() {
+        $stmt = $this->conn->prepare("SELECT * FROM messages");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return $result->fetch_all(MYSQLI_ASSOC);
+        } else {
+            return null;
+        }
+    }
+
+    public function removeMessage($id) {
+        $stmt = $this->conn->prepare("DELETE FROM messages WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        return $stmt->execute();
+    }
 }
 
 ?>

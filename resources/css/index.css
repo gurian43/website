@@ -11,6 +11,13 @@
     display: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -284,6 +291,46 @@ body {
     width: 30%;
     height: auto;
     margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact h1 {
+    width: 90%;
+    font-size: 2.5em;
+    border-bottom: 2px solid hsl(0, 0%, 30%);
+    margin-bottom: 16px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 30%);
+    background-color: hsla(0, 0%, 10%, 0.6);
+    color: white;
+}
+
+.contact-form input[type=submit] {
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: green;
 }
 
 /* responsiveness */
